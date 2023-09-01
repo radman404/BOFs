@@ -1,0 +1,27 @@
+{
+    "name": "static_syscalls_apc_shspawn",
+    "version": "1.0.0",
+    "command_name": "static_syscalls_apc_shspawn",
+    "extension_author": "Radman404",
+    "original_author": "ajpc500",
+    "repo_url": "https://github.com/ajpc500/BOFs",
+    "help": "DSpawn process and use syscalls to execute custom shellcode launch with Nt functions (NtMapViewOfSection -> NtQueueUserApc).",
+    "long_help": "",
+    "depends_on": "coff-loader",
+    "entrypoint": "go",
+    "files": [
+        {
+            "os": "windows",
+            "arch": "amd64",
+            "path": "syscallsapcspawn.x64.o"
+        }
+    ],
+    "arguments": [
+        {
+            "name": "sc",
+            "desc": "Path to the Shellcode",
+            "type": "file",
+            "optional": false
+        }
+    ]
+}
